@@ -74,6 +74,7 @@ li{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text--purple{
@@ -98,6 +99,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .nav__link--list{
@@ -228,6 +230,7 @@ nav{
 
 .language__list{
     display: flex;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
 
@@ -383,4 +386,66 @@ footer{
 .footer__anchor:hover .footer__logo--popper{
     transform: translateX(60px);
     opacity: 1;
+}
+
+/* For Small Phones, Tablets and Large Smart Phones */
+
+@media (max-width: 768px){
+nav{
+    height: 68px;
+}
+
+h1{
+    font-size: 28px;
+}
+
+.about-me__info--para{
+    font-size: 18px;
+}
+
+.language{
+    width: calc(100% / 3);
+}
+
+.project__desc--para{
+    font-size: 14px;
+}
+.project__desc{
+    left: 30px;
+    padding-right: 30px;
+}
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+    .nav__link:not(:last-child){
+        display: none;
+    }
+
+    .project__desc{
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .project__desc--para{
+        display: none;
+    }
+
+    .project__desc--links{
+        display: flex;
+        justify-content: center;
+    }
+
+    .project__desc--title{
+        text-align: center;
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .project__desc--subtitle{
+        text-align: center;
+        margin: 12px 0;
+    }
 }
